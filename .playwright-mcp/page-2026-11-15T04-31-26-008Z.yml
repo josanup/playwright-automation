@@ -1,0 +1,16 @@
+- generic [ref=e7]:
+  - heading "Getting Started" [level=4] [ref=e9]
+  - generic [ref=e11]:
+    - heading "Unlock Jenkins" [level=1] [ref=e12]
+    - paragraph [ref=e13]:
+      - text: To ensure Jenkins is securely set up by the administrator, a password has been written to the log (
+      - link "not sure where to find it?" [ref=e15] [cursor=pointer]:
+        - /url: https://www.jenkins.io/redirect/find-jenkins-logs
+      - text: ") and this file on the server:"
+    - paragraph [ref=e16]:
+      - code [ref=e18]: C:\Users\Anup Joshi\Jenkins\home\secrets\initialAdminPassword
+    - paragraph [ref=e19]: Please copy the password from either location and paste it below.
+    - generic [ref=e20]:
+      - generic [ref=e21]: Administrator password
+      - textbox "Administrator password" [ref=e22]
+  - button "Continue" [ref=e24] [cursor=pointer]

@@ -1,0 +1,6 @@
+[     257ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "new-password"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:8080/login:1
+[     266ms] [ERROR] Failed to load resource: the server responded with a status of 403 (Forbidden) @ http://localhost:8080/i18n/resourceBundle?baseName=jenkins.dialogs&_=1794717085933:1
+[  178192ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:8080/updateCenter/installStatus?_=1794717232155:1
+[  284163ms] [ERROR] Failed to load resource: the server responded with a status of 403 (Forbidden) @ http://localhost:8080/:1
+[  284955ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "new-password"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:8080/login?from=%2F:1
+[  284970ms] [ERROR] Failed to load resource: the server responded with a status of 403 (Forbidden) @ http://localhost:8080/i18n/resourceBundle?baseName=jenkins.dialogs&_=1794717370621:1
