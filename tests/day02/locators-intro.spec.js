@@ -1,22 +1,21 @@
-import {test} from "@playwright/test";
+import { test } from "@playwright/test";
 
-test("Simple google test", async ({page}) => {
-    // test codes
-    await page.goto("https://www.google.com");
+test("Simple google test", async ({ page }) => {
+  // test codes
+  await page.goto("https://www.google.com");
 
-    await page.waitForTimeout(3000);
+  await page.waitForTimeout(3000);
 
-    // locate the search box
-    let searchBox = page.locator("textarea[name='q']");
+  // locate the search box
+  let searchBox = page.locator("textarea[name='q']");
 
-    await searchBox.fill("CYDEO");
+  await searchBox.fill("CYDEO");
 
-    await page.waitForTimeout(3000);
+  await page.waitForTimeout(3000);
 
-    await searchBox.press("Enter");
+  await searchBox.press("Enter");
 
-    await page.waitForTimeout(3000);
-
+  await page.waitForTimeout(3000);
 });
 
 /*

@@ -1,9 +1,9 @@
-import { test } from '@playwright/test';
+import { test } from "@playwright/test";
 
-test.describe('', () => {
+test.describe("", () => {
   //create beforeEach to navigate to https://the-internet-5chk.onrender.com/
   test.beforeEach(async ({ page }) => {
-  await page.goto("https://the-internet-5chk.onrender.com/");
+    await page.goto("https://the-internet-5chk.onrender.com/");
   });
 
   test("innerText(): retrieves the visible text", async ({ page }) => {
@@ -13,7 +13,9 @@ test.describe('', () => {
     console.log(actualText);
   });
 
-  test("inputValue(): only works with <input>, <textarea>, <select>, retrieves the input value", async ({ page }) => {
+  test("inputValue(): only works with <input>, <textarea>, <select>, retrieves the input value", async ({
+    page,
+  }) => {
     let inputsLink = page.getByText("Inputs");
     await inputsLink.click();
 
@@ -30,7 +32,9 @@ test.describe('', () => {
     console.log(actualInput);
   });
 
-  test('getAttribute(): retrieves the value of the specified attribute', async ({ page }) => {
+  test("getAttribute(): retrieves the value of the specified attribute", async ({
+    page,
+  }) => {
     let abTestingLink = page.locator("text='A/B Testing'");
     let hrefValue = await abTestingLink.getAttribute("href");
     console.log(hrefValue);

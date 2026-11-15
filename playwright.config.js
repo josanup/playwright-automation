@@ -1,6 +1,9 @@
 // @ts-check
 import { defineConfig, devices } from "@playwright/test";
 
+import * as dotenv from "dotenv";
+dotenv.config();
+
 /**
  * @see https://playwright.dev/docs/test-configuration
  */
@@ -13,7 +16,7 @@ export default defineConfig({
   /* Retry on CI only */
   retries: 1,
   /* Opt out of parallel tests on CI. */
-  workers: 3,
+  workers: 1,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: "html",
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -39,64 +42,68 @@ export default defineConfig({
       name: "chromium",
       use: {
         ...devices["Desktop Chrome"],
-        viewport: { width: 1900, height: 1080 },
+        viewport: { width: 1536, height: 864 },
       },
     },
 
     /*
     {
-      name: "Microsoft Edge",
+      name: 'chromium',
       use: {
-        ...devices["Desktop Edge"],
-        channel: "msedge",
-        viewport: { width: 1900, height: 1080 },
-      },
-    },
-
-   
-    {
-      name: "firefox",
-      use: {
-        ...devices["Desktop Firefox"],
-        viewport: { width: 1850, height: 1000 },
+        ...devices['Desktop Chrome'],
+        viewport: {width: 1900, height: 1080}
       },
     },
 
     {
-      name: "webkit",
+      name: 'firefox',
       use: {
-        ...devices["Desktop Safari"],
-        viewport: { width: 1850, height: 1000 },
-      },
+        ...devices['Desktop Firefox'],
+        viewport: {width: 1850, height: 1000} 
+       },
     },
 
-    
-
-
     {
-      name: "Google Chrome",
-      use: {
-        ...devices["Desktop Chrome"],
-        channel: "chrome",
-        viewport: { width: 1900, height: 1080 },
+      name: 'webkit',
+      use: { 
+        ...devices['Desktop Safari'],
+        viewport: {width: 1850, height: 1000}  
       },
     },
 
     {
-      name: "Mobile Chrome",
+      name: 'Microsoft Edge',
       use: {
-        ...devices["Pixel 5"],
+        ...devices['Desktop Edge'],
+        channel: 'msedge',
+        viewport: {width: 1900, height: 1080}
+      },
+    },
+
+
+    {
+      name: 'Google Chrome',
+      use: {
+        ...devices['Desktop Chrome'],
+        channel: 'chrome',
+        viewport: {width: 1900, height: 1080}
       },
     },
 
     {
-      name: "Mobile Safari",
+      name: 'Mobile Chrome',
       use: {
-        ...devices["iPhone 16"],
+        ...devices['Pixel 5'],
       },
     },
 
-    
+     {
+      name: 'Mobile Safari',
+      use: {
+        ...devices['iPhone 16'],
+      },
+    },
+
 */
   ],
 });
